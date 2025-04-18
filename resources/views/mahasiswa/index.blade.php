@@ -7,6 +7,7 @@ Mahasiswa
 <div class="bg-white rounded-lg shadow-md overflow-hidden">
     <div class="px-6 py-4 border-b border-gray-200 bg-gray-50">
         <h2 class="text-xl font-semibold text-gray-700">Data Mahasiswa</h2>
+        <a href="{{ route('mahasiswa.create') }}">Tambah</a>
     </div>
     <div class="overflow-x-auto p-4">
         <table class="min-w-full table-auto">
