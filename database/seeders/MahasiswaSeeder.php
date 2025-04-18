@@ -24,7 +24,6 @@ class MahasiswaSeeder extends Seeder
             'nrp' => '1234567890',
             'email' => 'budi.santoso@example.com',
             'prodi' => 'Teknik Informatika',
-            'password' => Hash::make('password123'), // Jangan simpan password mentah!
             'no_telp' => '081234567890',
             'tanggal_lahir' => '2002-08-17',
             'tempat_lahir' => 'Surabaya',
@@ -39,7 +38,6 @@ class MahasiswaSeeder extends Seeder
                 'nrp' => $faker->unique()->numerify('##########'),
                 'email' => $faker->unique()->safeEmail,
                 'prodi' => $faker->randomElement(['Teknik Elektro', 'Teknik Mesin', 'Arsitektur', 'Desain Komunikasi Visual']),
-                'password' => Hash::make('rahasia'),
                 'no_telp' => $faker->phoneNumber,
                 'tanggal_lahir' => $faker->date('Y-m-d', 'now'),
                 'tempat_lahir' => $faker->city,

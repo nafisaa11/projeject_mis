@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Mahasiswa extends Model
 {
     protected $table = 'mahasiswas';
+    protected $primaryKey = 'id_mahasiswa';
     protected $fillable = [
         'nama',
         'nrp',
         'email',
         'prodi',
-        'password',
         'no_telp',
         'tanggal_lahir',
         'tempat_lahir',
@@ -20,7 +20,5 @@ class Mahasiswa extends Model
         'agama'
     ];
 
-    // Jika Anda ingin menyembunyikan password saat mengambil data
-    protected $hidden = ['password'];
-   
+    
 }

@@ -30,7 +30,22 @@ class MahasiswaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validasi data yang diterima dari form
+        $validatedData = $request->validate([
+            'nama' => 'required|string|max:255',
+            'nrp' => 'required|string|max:255|unique:mahasiswas',
+            'email' => 'required|email|max:255|unique:mahasiswas',
+            'prodi' => 'required|string|max:255',
+            'no_telp' => 'nullable|string|max:15',
+            'tanggal_lahir' => 'nullable|date',
+            'tempat_lahir' => 'nullable|string|max:255',
+            'jenis_kelamin' => 'nullable|string|max:10',
+            'agama' => 'nullable|string|max:50',
+        ]); 
+        // Menyimpan data mahasiswa ke database
+        Mahasiswa::create($validatedData);
+        // Redirect ke halaman index dengan pesan sukses
+        return redirect()->route('mahasiswa.index')->with('success', 'Mahasiswa berhasil ditambahkan.');
     }
 
     /**
@@ -38,7 +53,9 @@ class MahasiswaController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('mahasiswa.show', [
+            'mahasiswa' => Mahasiswa::findOrFail($id)
+        ]);
     }
 
     /**
@@ -46,7 +63,9 @@ class MahasiswaController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('mahasiswa.edit', [
+            'mahasiswa' => Mahasiswa::findOrFail($id)
+        ]);
     }
 
     /**
@@ -54,7 +73,22 @@ class MahasiswaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // Validasi data yang diterima dari form
+        $validatedData = $request->validate([
+            'nama' => 'required|string|max:255',
+            'nrp' => 'required|string|max:255|unique:mahasiswas,nrp,' . $id . ',id_mahasiswa',
+            'email' => 'required|email|max:255|unique:mahasiswas,email,' . $id . ',id_mahasiswa',
+            'prodi' => 'required|string|max:255',
+            'no_telp' => 'nullable|string|max:15',
+            'tanggal_lahir' => 'nullable|date',
+            'tempat_lahir' => 'nullable|string|max:255',
+            'jenis_kelamin' => 'nullable|string|max:10',
+            'agama' => 'nullable|string|max:50',
+        ]);
+        // Mengupdate data mahasiswa di database
+        Mahasiswa::where('id_mahasiswa', $id)->update($validatedData);
+        // Redirect ke halaman index dengan pesan sukses
+        return redirect()->route('mahasiswa.index')->with('success', 'Mahasiswa berhasil diperbarui.');
     }
 
     /**

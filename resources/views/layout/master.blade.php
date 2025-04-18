@@ -6,7 +6,7 @@
     @vite('resources/css/app.css')
     <title>@yield('title')</title>
 </head>
-<body class="bg-gray-100 h-screen overflow-hidden">
+<body class="bg-gray-100 h-screen">
     @include('layout.header')
 
     <div class="flex h-full pt-16">
