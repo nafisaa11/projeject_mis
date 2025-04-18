@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('nrp')->unique();
             $table->string('email')->unique();
             $table->string('prodi');
-            $table->string('password');
             $table->string('no_telp');
             $table->date('tanggal_lahir');
             $table->string('tempat_lahir');
