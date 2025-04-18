@@ -2,18 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Frs;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class FrsController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $frs = Frs::with(['mahasiswa', 'mataKuliah'])->get();
+        return view('home-index');
     }
 
     /**
@@ -35,7 +33,7 @@ class FrsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Frs $frs)
+    public function show(string $id)
     {
         //
     }
@@ -43,7 +41,7 @@ class FrsController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Frs $frs)
+    public function edit(string $id)
     {
         //
     }
@@ -51,7 +49,7 @@ class FrsController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Frs $frs)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -59,7 +57,7 @@ class FrsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Frs $frs)
+    public function destroy(string $id)
     {
         //
     }
