@@ -4,9 +4,9 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateJadwalKuliahsTable extends Migration
+return new class extends Migration
 {
-    public function up()
+    public function up(): void
     {
         Schema::create('jadwal_kuliahs', function (Blueprint $table) {
             $table->id('id_jadwal_kuliah');
@@ -18,13 +18,13 @@ class CreateJadwalKuliahsTable extends Migration
             $table->time('jam_akhir');
             $table->timestamps();
 
-            $table->foreign('id_matakuliah')->references('id_matakuliah')->on('mata_kuliahs')->onDelete('cascade');
+            // // Foreign Key ke tabel mata_kuliahs
+            // $table->foreign('id_matakuliah')->references('id_matakuliah')->on('mata_kuliahs')->onDelete('cascade');
         });
     }
 
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('jadwal_kuliahs');
     }
-}
-
+};
