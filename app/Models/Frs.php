@@ -6,11 +6,38 @@ use Illuminate\Database\Eloquent\Model;
 
 class Frs extends Model
 {
-    protected $table = 'frs_migration';
-    protected $fillable = ['name', 'description', 'status'];
+    protected $table = 'frses';
+    protected $fillable = [
+        'id_mahasiswa',
+        'id_dosen',
+        'id_nilai',
+        'id_jadwal_kuliah',
+        'tahun_ajaran',
+        'semester',
+        'disetujui'
+    ];
 
-    public function frs()
+    // Mengambil nama mahasiswa
+    public function mahasiswa()
     {
-        return $this->hasMany(Frs::class);
+        return $this->belongsTo(Mahasiswa::class, 'id_mahasiswa');
+    }
+
+    // Mengambil nama dosen
+    public function dosen()
+    {
+        return $this->belongsTo(Dosen::class, 'id_dosen');
+    }
+
+    // Mengambil ips mahasiswa
+    public function nilai()
+    {
+        return $this->belongsTo(Nilai::class, 'id_nilai');
+    }
+
+    // Mengambil jadwal kuliah
+    public function jadwalKuliah()
+    {
+        return $this->belongsTo(JadwalKuliah::class, 'id_jadwal_kuliah');
     }
 }

@@ -19,6 +19,7 @@ class NilaiController extends Controller
             'id_matakuliah' => 'required|exists:mata_kuliahs,id_matakuliah',
             'nilai_angka' => 'required|numeric',
             'nilai_huruf' => 'required|string|max:2',
+            'ips' => 'required|numeric',
         ]);
 
         return Nilai::create($validated);

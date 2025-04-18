@@ -19,9 +19,10 @@ class Jadwal_kuliah extends Model
         'jam_akhir',
     ];
 
-    // public function mataKuliah()
-    // {
-    //     return $this->belongsTo(MataKuliah::class, 'id_matakuliah');
-    // }
+    // Mengambil nama matakuliah
+    public function mataKuliah()
+    {
+        return $this->belongsTo(MataKuliah::class, 'id_matakuliah');
+    }
 }
 

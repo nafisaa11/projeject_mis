@@ -18,13 +18,15 @@ class Nilai extends Model
         'nilai_huruf',
     ];
 
+    // Mengambil nrp, nama, kelas, prodi mahasiswa
     public function mahasiswa()
     {
         return $this->belongsTo(Mahasiswa::class, 'id_mahasiswa');
     }
 
-    // public function mataKuliah()
-    // {
-    //     return $this->belongsTo(MataKuliah::class, 'id_matakuliah');
-    // }
+    // Mengambil kode, nama, sks matakuliah
+    public function mataKuliah()
+    {
+        return $this->belongsTo(MataKuliah::class, 'id_matakuliah');
+    }
 }
