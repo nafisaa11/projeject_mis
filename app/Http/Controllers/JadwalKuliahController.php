@@ -16,6 +16,7 @@ class JadwalKuliahController extends Controller
     {
         $validated = $request->validate([
             'id_matakuliah' => 'required|exists:mata_kuliahs,id_matakuliah',
+            'id_dosen' => 'required|exists:dosens,id_dosen',
             'hari' => 'required|string',
             'tanggal' => 'required|date',
             'ruangan' => 'required|string',
