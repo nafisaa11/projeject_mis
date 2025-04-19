@@ -32,7 +32,7 @@ Nilai
                         {{ $nilai->mahasiswa->nama }}<br>
                         <span class="text-xs text-gray-500">{{ $nilai->mahasiswa->nrp }}</span>
                     </td>
-                    <td class="px-6 py-3">{{ $nilai->matkul->nama }}</td>
+                    <td class="px-6 py-3">{{ $nilai->matkul->nama_matkul }}</td>
                     <td class="px-6 py-3">{{ $nilai->nilai_angka }}</td>
                     <td class="px-6 py-3">{{ $nilai->nilai_huruf }}</td>
                     <td class="px-6 py-3 flex gap-2">

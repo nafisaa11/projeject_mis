@@ -16,9 +16,9 @@ Edit Nilai
             <select name="id_mahasiswa" id="id_mahasiswa" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
                 <option value="">Pilih Mahasiswa</option>
                 @foreach($mahasiswas as $mhs)
-                    <option value="{{ $mhs->id_mahasiswa }}" {{ $mhs->id_mahasiswa == $nilai->id_mahasiswa ? 'selected' : '' }}>
-                        {{ $mhs->nama }} - {{ $mhs->npm }}
-                    </option>
+                <option value="{{ $mhs->id_mahasiswa }}" {{ $mhs->id_mahasiswa == $nilai->id_mahasiswa ? 'selected' : '' }}>
+                    {{ $mhs->nama }} - {{ $mhs->npm }}
+                </option>
                 @endforeach
             </select>
         </div>
@@ -28,16 +28,23 @@ Edit Nilai
             <select name="id_matkul" id="id_matkul" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
                 <option value="">Pilih Mata Kuliah</option>
                 @foreach($matkuls as $mk)
-                    <option value="{{ $mk->id_matkul }}" {{ $mk->id_matkul == $nilai->id_matkul ? 'selected' : '' }}>
-                        {{ $mk->nama_matkul }} ({{ $mk->kode_matkul }})
-                    </option>
+                <option value="{{ $mk->id_matkul }}" {{ $mk->id_matkul == $nilai->id_matkul ? 'selected' : '' }}>
+                    {{ $mk->nama_matkul }} ({{ $mk->kode_matkul }})
+                </option>
                 @endforeach
             </select>
         </div>
 
         <div>
             <label for="nilai_angka" class="block text-gray-700 text-sm font-bold mb-2">Nilai Angka</label>
-            <input type="number" name="nilai_angka" id="nilai_angka" step="0.01" value="{{ $nilai->nilai_angka }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+            <select name="nilai_angka" id="nilai_angka" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                @php
+                $nilaiOptions = [0, 1, 2, 2.5, 2.75, 3, 3.25, 3.5, 3.75, 4];
+                @endphp
+                @foreach($nilaiOptions as $opt)
+                <option value="{{ $opt }}" {{ $nilai->nilai_angka == $opt ? 'selected' : '' }}>{{ $opt }}</option>
+                @endforeach
+            </select>
         </div>
 
         <div>

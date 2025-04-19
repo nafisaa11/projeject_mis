@@ -32,7 +32,7 @@ Dashboard
         </div>
         <div class="card-body">
           Tambah Data Mahasiswas =>   
-          <a href="{{ route('mahasiswa.create') }}">Klik disini!</a>
+          <a href="{{ route('nilai.create') }}">Klik disini!</a>
         </div>
         <!-- /.card-body -->
       </div>
