@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Matkul;
+use App\Models\Frs;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class MatkulController extends Controller
+class FrsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        // $frs = Frs::with(['mahasiswa', 'mataKuliah'])->get();
     }
 
     /**
@@ -34,7 +35,7 @@ class MatkulController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Matkul $matkul)
+    public function show(Frs $frs)
     {
         //
     }
@@ -42,7 +43,7 @@ class MatkulController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Matkul $matkul)
+    public function edit(Frs $frs)
     {
         //
     }
@@ -50,7 +51,7 @@ class MatkulController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Matkul $matkul)
+    public function update(Request $request, Frs $frs)
     {
         //
     }
@@ -58,7 +59,7 @@ class MatkulController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Matkul $matkul)
+    public function destroy(Frs $frs)
     {
         //
     }

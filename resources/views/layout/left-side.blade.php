@@ -5,11 +5,11 @@
    <!-- Isi sidebar (menu) -->
    <nav class="p-4">
      <ul>
-      <li>Mahasiswa</li>
-      <li>Dosen</li>
-      <li>Matakuliah</li>
-      <li>frs</li>
-      <li>Nilai</li>
+      <li><a href="{{ route('mahasiswa.index') }}">Mahasiswa</a></li>
+      <li><a href="{{ route('dosen.index') }}">Dosen</a></li>
+      <li><a href="{{ route('mataKuliah.index') }}">Mata Kuliah</a></li>
+      <li><a href="{{ route('frs.index') }}">FRS</a></li>
+      <li><a href="{{ route('nilai.index') }}">Nilai</a></li>
      </ul>
    </nav>
  </aside>

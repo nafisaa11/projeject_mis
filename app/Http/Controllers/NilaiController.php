@@ -19,7 +19,7 @@ class NilaiController extends Controller
     public function create()
     {
         $mahasiswas = Mahasiswa::all();
-        $mataKuliahs = Matkul::all();
+        $mataKuliahs = MataKuliah::all();
     
         return view('nilai.create', compact('mahasiswas', 'mataKuliahs'));
     }
@@ -50,7 +50,7 @@ class NilaiController extends Controller
     {
         $nilai = Nilai::findOrFail($id);
         $mahasiswas = Mahasiswa::all();
-        $mataKuliahs = Matkul::all();
+        $mataKuliahs = MataKuliah::all();
     
         return view('nilai.edit', compact('nilai', 'mahasiswas', 'mataKuliahs'));
     }

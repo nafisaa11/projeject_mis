@@ -17,10 +17,4 @@ class Dosen extends Model
         'jenis_kelamin',
         'agama'
     ];
-
-    // Relasi ke tabel mata_kuliahs
-    // public function mataKuliah()
-    // {
-    //     return $this->hasMany(Matkul::class, 'id_dosen');
-    // }
 }

@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('jadwal_kuliahs', function (Blueprint $table) {
             $table->id('id_jadwal_kuliah');
-            $table->unsignedBigInteger('id_matakuliah');
+            $table->unsignedBigInteger('id_matkul');
             $table->string('hari');
             $table->date('tanggal');
             $table->string('ruangan');

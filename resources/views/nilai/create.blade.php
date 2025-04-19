@@ -20,11 +20,11 @@ Tambah Nilai
         </div>
 
         <div>
-            <label for="id_matakuliah" class="block text-gray-700 text-sm font-bold mb-2">Mata Kuliah</label>
-            <select name="id_matakuliah" id="id_matakuliah" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+            <label for="id_matkul" class="block text-gray-700 text-sm font-bold mb-2">Mata Kuliah</label>
+            <select name="id_matkul" id="id_matkul" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
                 <option value="">Pilih Mata Kuliah</option>
-                @foreach($mataKuliahs as $mk)
-                <option value="{{ $mk->id_matakuliah }}">{{ $mk->nama_matakuliah }} ({{ $mk->kode_matakuliah }})</option>
+                @foreach($matkuls as $mk)
+                <option value="{{ $mk->id_matkul }}">{{ $mk->nama_matkul }} ({{ $mk->kode_matkul }})</option>
                 @endforeach
             </select>
         </div>

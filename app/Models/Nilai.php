@@ -27,6 +27,6 @@ class Nilai extends Model
     // Mengambil kode, nama, sks matakuliah
     public function mataKuliah()
     {
-        return $this->belongsTo(Matkul::class, 'id_matakuliah');
+        return $this->belongsTo(Matkul::class, 'id_matkul');
     }
 }

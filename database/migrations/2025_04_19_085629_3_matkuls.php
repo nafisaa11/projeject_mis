@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('matkuls', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_matkul');
             $table->string('kode_matkul');
             $table->string('nama_matkul');
             $table->integer('sks');
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('frs_migration');
+        Schema::dropIfExists('matkuls');
     }
 };

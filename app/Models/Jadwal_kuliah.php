@@ -4,7 +4,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Jadwal_kuliah extends Model
+class JadwalKuliah extends Model
 {
     use HasFactory;
 
@@ -22,7 +22,7 @@ class Jadwal_kuliah extends Model
     // Mengambil nama matakuliah
     public function mataKuliah()
     {
-        return $this->belongsTo(MataKuliah::class, 'id_matakuliah');
+        return $this->belongsTo(MataKuliah::class, 'id_matkul');
     }
 }
 
