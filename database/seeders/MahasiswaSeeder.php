@@ -33,7 +33,7 @@ class MahasiswaSeeder extends Seeder
         ]);
 
         // Anda bisa menambahkan lebih banyak data contoh di sini
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 0; $i < 5; $i++) {
             Mahasiswa::create([
                 'nama' => $faker->name,
                 'nrp' => $faker->unique()->numerify('##########'),

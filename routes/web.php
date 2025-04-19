@@ -11,15 +11,12 @@ use App\Http\Controllers\NilaiController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/home', [HomeController::class, 'index'])->name('home.index');
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
 Route::resource('mahasiswa', MahasiswaController::class);
-Route::resource('frs', FrsController::class);
+// Route::resource('frs', FrsController::class);
 Route::resource('mata-kuliah', MatkulController::class);
 Route::resource('jadwal', JadwalKuliahController::class);
-// Route::resource('dosen', DosenController::class);
+Route::resource('dosen', DosenController::class);
 Route::resource('nilai', NilaiController::class);
 

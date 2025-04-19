@@ -36,6 +36,7 @@ class MahasiswaController extends Controller
             'nrp' => 'required|string|max:255|unique:mahasiswas',
             'email' => 'required|email|max:255|unique:mahasiswas',
             'prodi' => 'required|string|max:255',
+            'kelas' => 'required|string|max:255',
             'no_telp' => 'nullable|string|max:15',
             'tanggal_lahir' => 'nullable|date',
             'tempat_lahir' => 'nullable|string|max:255',
@@ -79,6 +80,7 @@ class MahasiswaController extends Controller
             'nrp' => 'required|string|max:255|unique:mahasiswas,nrp,' . $id . ',id_mahasiswa',
             'email' => 'required|email|max:255|unique:mahasiswas,email,' . $id . ',id_mahasiswa',
             'prodi' => 'required|string|max:255',
+            'kelas' => 'required|string|max:255',
             'no_telp' => 'nullable|string|max:15',
             'tanggal_lahir' => 'nullable|date',
             'tempat_lahir' => 'nullable|string|max:255',
@@ -96,6 +98,10 @@ class MahasiswaController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $mahasiswa = Mahasiswa::findOrFail($id);
+        $mahasiswa->delete();
+
+        return redirect()->route('mahasiswa.index')->with('success', 'Mahasiswa berhasil dihapus.');
+
     }
 }
