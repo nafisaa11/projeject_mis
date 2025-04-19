@@ -58,4 +58,34 @@ Edit Nilai
         <a href="{{ route('nilai.index') }}" class="inline-block text-sm text-gray-600 ml-4 hover:underline">Kembali</a>
     </form>
 </div>
+
+{{-- Script otomatis konversi angka ke huruf --}}
+<script>
+    document.getElementById('nilai_angka').addEventListener('change', function () {
+        const nilai = parseFloat(this.value);
+        const nilaiHuruf = document.getElementById('nilai_huruf');
+
+        if (nilai === 4) {
+            nilaiHuruf.value = 'A';
+        } else if (nilai === 3.75) {
+            nilaiHuruf.value = 'AB';
+        } else if (nilai >= 3.5) {
+            nilaiHuruf.value = 'A-';
+        } else if (nilai >= 3.25) {
+            nilaiHuruf.value = 'B+';
+        } else if (nilai >= 3) {
+            nilaiHuruf.value = 'B';
+        } else if (nilai >= 2.75) {
+            nilaiHuruf.value = 'B-';
+        } else if (nilai >= 2.5) {
+            nilaiHuruf.value = 'C+';
+        } else if (nilai >= 2) {
+            nilaiHuruf.value = 'C';
+        } else if (nilai >= 1) {
+            nilaiHuruf.value = 'D';
+        } else {
+            nilaiHuruf.value = 'E';
+        }
+    });
+</script>
 @endsection
