@@ -16,9 +16,9 @@ return new class extends Migration
             $table->string('nilai_huruf');
             $table->timestamps();
 
-            // // Foreign Key ke mahasiswa dan matakuliah
-            // $table->foreign('id_mahasiswa')->references('id_mahasiswa')->on('mahasiswas')->onDelete('cascade');
-            // $table->foreign('id_matakuliah')->references('id_matakuliah')->on('mata_kuliahs')->onDelete('cascade');
+            // Foreign Key ke mahasiswa dan matakuliah
+            $table->foreign('id_mahasiswa')->references('id_mahasiswa')->on('mahasiswas')->onDelete('cascade');
+            $table->foreign('id_matkul')->references('id_matkul')->on('matkuls')->onDelete('cascade');
         });
     }
 

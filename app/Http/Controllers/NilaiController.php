@@ -4,12 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Nilai;
+use App\Models\Mahasiswa;
+use App\Models\Matkul;
 
 class NilaiController extends Controller
 {
     public function index()
     {
-        return Nilai::with(['mahasiswa', 'mataKuliah'])->get();
+        // Ambil data nilai beserta relasi mahasiswa dan mata kuliah
+        $nilais = Nilai::with(['mahasiswa', 'mataKuliah'])->get();
+        return view('nilai.index', compact('nilais'));
+    }
+
+    public function create()
+    {
+        $mahasiswas = Mahasiswa::all();
+        $mataKuliahs = Matkul::all();
+    
+        return view('nilai.create', compact('mahasiswas', 'mataKuliahs'));
     }
 
     public function store(Request $request)
@@ -22,25 +34,38 @@ class NilaiController extends Controller
             'ips' => 'required|numeric',
         ]);
 
-        return Nilai::create($validated);
+        // Simpan data nilai
+        Nilai::create($validated);
+        return redirect()->route('nilai.index');
     }
 
     public function show($id)
     {
-        return Nilai::with(['mahasiswa', 'mataKuliah'])->findOrFail($id);
+        // Menampilkan nilai dengan relasi mahasiswa dan mata kuliah
+        $nilai = Nilai::with(['mahasiswa', 'mataKuliah'])->findOrFail($id);
+        return view('nilai.show', compact('nilai'));
     }
+
+    public function edit($id)
+    {
+        $nilai = Nilai::findOrFail($id);
+        $mahasiswas = Mahasiswa::all();
+        $mataKuliahs = Matkul::all();
+    
+        return view('nilai.edit', compact('nilai', 'mahasiswas', 'mataKuliahs'));
+    }
+    
 
     public function update(Request $request, $id)
     {
         $nilai = Nilai::findOrFail($id);
         $nilai->update($request->all());
-        return $nilai;
+        return redirect()->route('nilai.index');
     }
 
     public function destroy($id)
     {
         Nilai::destroy($id);
-        return response()->json(['message' => 'Deleted successfully']);
+        return redirect()->route('nilai.index');
     }
 }
-

@@ -9,6 +9,7 @@
       <li>Dosen</li>
       <li>Matakuliah</li>
       <li>frs</li>
+      <li>Nilai</li>
      </ul>
    </nav>
  </aside>

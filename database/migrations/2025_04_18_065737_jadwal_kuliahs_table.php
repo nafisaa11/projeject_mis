@@ -18,8 +18,8 @@ return new class extends Migration
             $table->time('jam_akhir');
             $table->timestamps();
 
-            // // Foreign Key ke tabel mata_kuliahs
-            // $table->foreign('id_matakuliah')->references('id_matakuliah')->on('mata_kuliahs')->onDelete('cascade');
+            // Foreign Key ke tabel mata_kuliahs
+            $table->foreign('id_matkul')->references('id_matkul')->on('matkuls')->onDelete('cascade');
         });
     }
 
