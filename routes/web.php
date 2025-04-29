@@ -10,16 +10,38 @@ use App\Http\Controllers\DosenController;
 use App\Http\Controllers\NilaiController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/login', [AuthController::class, 'index']);
+// Route::get('/login', [AuthController::class, 'index']);
 
-// Route::get('/nilai/{nilai}/edit', [NilaiController::class, 'edit'])->name('nilai.edit');
-Route::get('/nilai/create', [NilaiController::class, 'create'])->name('nilai.create');
-Route::get('/', [HomeController::class, 'index'])->name('home.index');
-Route::resource('mahasiswa', MahasiswaController::class);
-Route::resource('frs', FrsController::class);
-Route::resource('mataKuliah', MataKuliahController::class);
-Route::resource('jadwal', JadwalKuliahController::class);
-Route::resource('dosen', DosenController::class);
-Route::resource('nilai', NilaiController::class);
+//Login
+Route::middleware(['guest'])->group(function () {
+    Route::get('/login', [AuthController::class, 'index'])->name('login');
+    Route::post('/login', [AuthController::class, 'login']);
+});
+
+Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+
+Route::middleware(['auth'])->group(function () {
+
+
+    // Admin Routes
+        Route::get('/admin/dashboard', [HomeController::class, 'adminDashboard'])->name('admin.dashboard');
+        Route::resource('mahasiswa', MahasiswaController::class);
+        // Route::resource('frs', FrsController::class);
+        Route::resource('mataKuliah', MataKuliahController::class);
+        // Route::resource('jadwal', JadwalKuliahController::class);
+        Route::resource('dosen', DosenController::class);
+        // Route::resource('nilai', NilaiController::class);
+    
+
+   
+});
+
+
+
+
+
+
+
 
 

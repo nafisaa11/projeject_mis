@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -12,6 +13,29 @@ class AuthController extends Controller
     public function index()
     {
         return view('auth.login');
+    }
+
+    public function login(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ],
+        [
+            'email.required' => 'Email tidak boleh kosong',
+            'password.required' => 'Password tidak boleh kosong',
+        ]);
+
+        $credentials = $request->only('email', 'password');
+
+        if(Auth::attempt($credentials)){
+            $role = Auth::user()->role;
+            return match ($role) {
+                'admin' => redirect()->route('admin.dashboard'),
+                // 'mahasiswa' => redirect()->route('mahasiswa.dashboard'),
+                // 'dosen' => redirect()->route('dosen.dashboard'),
+            };
+        }
     }
 
     /**
