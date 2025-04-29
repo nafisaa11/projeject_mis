@@ -13,7 +13,8 @@ class FrsController extends Controller
      */
     public function index()
     {
-        // $frs = Frs::with(['mahasiswa', 'mataKuliah'])->get();
+        $frs = Frs::all();
+        return view('frs.index', compact('frs'));
     }
 
     /**
@@ -21,7 +22,7 @@ class FrsController extends Controller
      */
     public function create()
     {
-        //
+        // re
     }
 
     /**
