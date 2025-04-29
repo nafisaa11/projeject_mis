@@ -55,7 +55,7 @@ Edit Nilai
         <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
             Update Nilai
         </button>
-        <a href="{{ route('nilai.index') }}" class="inline-block text-sm text-gray-600 ml-4 hover:underline">Kembali</a>
+        {{-- <a href="{{ route('nilai.index') }}" class="inline-block text-sm text-gray-600 ml-4 hover:underline">Kembali</a> --}}
     </form>
 </div>
 

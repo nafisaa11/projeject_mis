@@ -33,7 +33,7 @@ Dashboard
       <div class="bg-white p-6 rounded-lg shadow-xl border-l-4 border-yellow-500 transform transition duration-300 hover:scale-105">
         <h3 class="text-xl font-semibold mb-3 text-gray-800">Manajemen Nilai Mahasiswa</h3>
         <p class="text-sm text-gray-600 mb-5">Input, kelola, dan review data nilai mahasiswa untuk evaluasi akademik.</p>
-        <a href="{{ route('nilai.index') }}" class="text-blue-500 hover:underline font-medium">Lihat Nilai Mahasiswa →</a>
+        {{-- <a href="{{ route('nilai.index') }}" class="text-blue-500 hover:underline font-medium">Lihat Nilai Mahasiswa →</a> --}}
       </div>
 
       <!-- Anda bisa menambahkan lebih banyak box di sini sesuai kebutuhan -->

@@ -23,18 +23,14 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function () {
 
-
     // Admin Routes
-        Route::get('/admin/dashboard', [HomeController::class, 'adminDashboard'])->name('admin.dashboard');
+    Route::get('/', [HomeController::class, 'index'])->name('home.index');
         Route::resource('mahasiswa', MahasiswaController::class);
         // Route::resource('frs', FrsController::class);
         Route::resource('mataKuliah', MataKuliahController::class);
         // Route::resource('jadwal', JadwalKuliahController::class);
         Route::resource('dosen', DosenController::class);
         // Route::resource('nilai', NilaiController::class);
-    
-
-   
 });
 
 

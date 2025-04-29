@@ -31,7 +31,7 @@ class AuthController extends Controller
         if(Auth::attempt($credentials)){
             $role = Auth::user()->role;
             return match ($role) {
-                'admin' => redirect()->route('admin.dashboard'),
+                'admin' => redirect()->route('home.index'),
                 // 'mahasiswa' => redirect()->route('mahasiswa.dashboard'),
                 // 'dosen' => redirect()->route('dosen.dashboard'),
             };
@@ -83,6 +83,7 @@ class AuthController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Auth::logout();
+        return redirect('/login');
     }
 }
