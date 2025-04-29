@@ -10,6 +10,7 @@
       <li><a href="{{ route('mataKuliah.index') }}">Mata Kuliah</a></li>
       <li><a href="{{ route('frs.index') }}">FRS</a></li>
       <li><a href="{{ route('nilai.index') }}">Nilai</a></li>
+      <li><a href="{{ route('jadwal.index') }}">Jadwal</a></li>
      </ul>
    </nav>
  </aside>
