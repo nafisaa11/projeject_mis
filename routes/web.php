@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\FrsController;
@@ -9,6 +9,8 @@ use App\Http\Controllers\JadwalKuliahController;
 use App\Http\Controllers\DosenController;
 use App\Http\Controllers\NilaiController;
 use Illuminate\Support\Facades\Route;
+
+Route::get('/login', [AuthController::class, 'index']);
 
 // Route::get('/nilai/{nilai}/edit', [NilaiController::class, 'edit'])->name('nilai.edit');
 Route::get('/nilai/create', [NilaiController::class, 'create'])->name('nilai.create');
