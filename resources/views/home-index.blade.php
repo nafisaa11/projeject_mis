@@ -70,7 +70,6 @@ Dashboard
           </svg>
         </div>
       </div>
-<<<<<<< HEAD
       <div class="mt-4 flex items-center text-sm">
         <span class="text-green-500 flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -79,13 +78,6 @@ Dashboard
           5%
         </span>
         <span class="text-gray-500 ml-2">dari bulan lalu</span>
-=======
-
-      <div class="bg-white p-6 rounded-lg shadow-xl border-l-4 border-yellow-500 transform transition duration-300 hover:scale-105">
-        <h3 class="text-xl font-semibold mb-3 text-gray-800">Manajemen Nilai Mahasiswa</h3>
-        <p class="text-sm text-gray-600 mb-5">Input, kelola, dan review data nilai mahasiswa untuk evaluasi akademik.</p>
-        {{-- <a href="{{ route('nilai.index') }}" class="text-blue-500 hover:underline font-medium">Lihat Nilai Mahasiswa →</a> --}}
->>>>>>> 9e6a76d43ce05e86723b0f8bc6e982a3a8e5b9a4
       </div>
     </div>
 
