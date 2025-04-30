@@ -12,8 +12,8 @@ class NilaiController extends Controller
     public function index()
     {
         // Ambil data nilai beserta relasi mahasiswa dan mata kuliah
-        $nilais = Nilai::with(['mahasiswa', 'matkul'])->get();
-        return view('nilai.index', compact('nilais'));
+        // $nilais = Nilai::with(['mahasiswa', 'matkul'])->get();
+        // return view('nilai.index', compact('nilais'));
     }
 
     public function create()
