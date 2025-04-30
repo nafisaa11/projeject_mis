@@ -19,5 +19,7 @@ Route::resource('mataKuliah', MataKuliahController::class);
 Route::resource('jadwal', JadwalKuliahController::class);
 Route::resource('dosen', DosenController::class);
 Route::resource('nilai', NilaiController::class);
+Route::resource('home', HomeController::class);
+
 
 

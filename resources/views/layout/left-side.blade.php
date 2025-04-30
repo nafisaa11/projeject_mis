@@ -8,10 +8,7 @@
   <nav class="px-4 py-6 space-y-6">
     <ul class="space-y-2">
       <li>
-        <a href="#" class="flex items-center px-3 py-2 rounded hover:bg-gray-800 transition duration-200 {{ Request::is('dashboard') ? 'bg-gray-800' : '' }}">
-          <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path d="M4 6h16M4 12h8m-8 6h16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
+        <a href="{{ route('home.index') }}" class="flex items-center px-3 py-2 rounded hover:bg-gray-800 transition duration-200 {{ Request::is('dashboard') ? 'bg-gray-800' : '' }}">
           Dashboard
         </a>
       </li>
