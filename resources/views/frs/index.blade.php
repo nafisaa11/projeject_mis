@@ -29,9 +29,15 @@ FRS
                 @foreach($frses as $frs)
                 <tr class="hover:bg-gray-100 transition-colors duration-200">
                     <td class="px-6 py-3">{{ $loop->iteration }}</td>
-                    <td class="px-6 py-3">{{ $frs->kode_matkul }}</td>
+                    <td class="px-6 py-3">
+                        <p> {{ $frs->nama_matkul }} </p>
+                        <p> Hari : {{ $frs->hari }} </p>
+                        <p> Jam  : {{ $frs->jam_awal }} - {{ $frs->jam_akhir }}</p>
+                    </td>
                     <td class="px-6 py-3">{{ $frs->nama_matkul }}</td>
+                    <td class="px-6 py-3">{{ $frs->dosen }}</td>
                     <td class="px-6 py-3">{{ $frs->sks }}</td>
+
                     <td class="px-6 py-3 flex gap-2">
                         <a href="{{ route('mataKuliah.edit', $frs->id_matkul) }}" class="text-indigo-600 hover:underline">Edit</a>
                         <form action="{{ route('mataKuliah.destroy', $frs->id_matkul) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?');">

@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Nilai extends Model
 {
     use HasFactory;
@@ -13,7 +14,7 @@ class Nilai extends Model
 
     protected $fillable = [
         'id_mahasiswa',
-        'id_matakuliah',
+        'id_matkul',
         'nilai_angka',
         'nilai_huruf',
     ];
@@ -24,8 +25,7 @@ class Nilai extends Model
         return $this->belongsTo(Mahasiswa::class, 'id_mahasiswa');
     }
 
-    // Mengambil kode, nama, sks matakuliah
-    public function mataKuliah()
+    public function matkul()
     {
         return $this->belongsTo(Matkul::class, 'id_matkul');
     }

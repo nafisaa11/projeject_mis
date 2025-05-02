@@ -6,41 +6,40 @@ Dashboard
 
 @section('content')
 <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Dashboard</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item">Home</li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
-
-      <!-- Default box -->
-      <div class="card">
-        <div class="card-header bg-info">  
-          <h3 class="card-title">Dashboard</h3>
-        </div>
-        <div class="card-body">
-          Tambah Data Mahasiswas =>   
-          <a href="{{ route('mahasiswa.create') }}">Klik disini!</a>
-        </div>
-        <!-- /.card-body -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="flex items-center justify-between mb-6">
+        <h1 class="text-3xl font-semibold text-gray-800">Dashboard</h1>
+        <span class="text-lg text-gray-600">Halo, {{ Auth::user()->name ?? 'YAN-MIS' }}</span>
       </div>
-      <!-- /.card -->
+    </div>
+  </section>
 
-    </section>
-    <!-- /.content -->
-  </div>
+  <section class="content">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+
+      <div class="bg-white p-6 rounded-lg shadow-xl border-l-4 border-blue-500 transform transition duration-300 hover:scale-105">
+        <h3 class="text-xl font-semibold mb-3 text-gray-800">Manajemen Mahasiswa</h3>
+        <p class="text-sm text-gray-600 mb-5">Kelola, update, dan perbarui data mahasiswa yang terdaftar di sistem.</p>
+        <a href="{{ route('mahasiswa.index') }}" class="text-blue-500 hover:underline font-medium">Lihat Data Mahasiswa →</a>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-xl border-l-4 border-green-500 transform transition duration-300 hover:scale-105">
+        <h3 class="text-xl font-semibold mb-3 text-gray-800">Manajemen Dosen</h3>
+        <p class="text-sm text-gray-600 mb-5">Kelola data dosen aktif, termasuk informasi kontak dan jadwal mengajar.</p>
+        <a href="{{ route('dosen.index') }}" class="text-blue-500 hover:underline font-medium">Lihat Data Dosen →</a>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-xl border-l-4 border-yellow-500 transform transition duration-300 hover:scale-105">
+        <h3 class="text-xl font-semibold mb-3 text-gray-800">Manajemen Nilai Mahasiswa</h3>
+        <p class="text-sm text-gray-600 mb-5">Input, kelola, dan review data nilai mahasiswa untuk evaluasi akademik.</p>
+        <a href="{{ route('nilai.index') }}" class="text-blue-500 hover:underline font-medium">Lihat Nilai Mahasiswa →</a>
+      </div>
+
+      <!-- Anda bisa menambahkan lebih banyak box di sini sesuai kebutuhan -->
+    </div>
+  </section>
+</div>
 @endsection
 
 @section('username')
