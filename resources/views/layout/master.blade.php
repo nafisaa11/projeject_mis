@@ -13,7 +13,7 @@
     <div class="flex flex-1 pt-16">
         @include('layout.left-side')
 
-        <main class="flex-1 p-6">
+        <main class="flex-1">
             @yield('content')
         </main>
     </div>

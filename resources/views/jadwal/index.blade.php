@@ -27,6 +27,7 @@ Jadwal Kuliah
                     <th class="px-6 py-3 text-left">Hari</th>
                     <th class="px-6 py-3 text-left">Tanggal</th>
                     <th class="px-6 py-3 text-left">Ruangan</th>
+                    <th class="px-6 py-3 text-left">Kelas</th>
                     <th class="px-6 py-3 text-left">Jam</th>
                     <th class="px-6 py-3 text-left">Aksi</th>
                 </tr>
@@ -40,6 +41,7 @@ Jadwal Kuliah
                     <td class="px-6 py-3">{{ $jd->hari }}</td>
                     <td class="px-6 py-3">{{ $jd->tanggal }}</td>
                     <td class="px-6 py-3">{{ $jd->ruangan }}</td>
+                    <td class="px-6 py-3">{{ $jd->kelas }}</td>
                     <td class="px-6 py-3">{{ $jd->jam_awal }} - {{ $jd->jam_akhir }}</td>
                     <td class="px-6 py-3 flex gap-2">
                         <a href="{{ route('jadwal.edit', $jd->id_jadwal_kuliah) }}" class="text-indigo-600 hover:underline">Edit</a>

@@ -57,6 +57,11 @@ Tambah Jadwal Kuliah
             <input type="text" name="ruangan" id="ruangan" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
         </div>
 
+        <div>
+            <label for="kelas" class="block text-gray-700 text-sm font-bold mb-2">Kelas</label>
+            <input type="text" name="kelas" id="kelas" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+        </div>
+
         <div class="flex space-x-4">
             <div class="w-1/2">
                 <label for="jam_awal" class="block text-gray-700 text-sm font-bold mb-2">Jam Mulai</label>

@@ -39,6 +39,8 @@ class JadwalKuliahController extends Controller
             'hari'      => 'required|string',
             'tanggal'   => 'required|date',
             'ruangan'   => 'required|string',
+            'kelas'    => 'required|string',
+            'sks'      => 'required|integer',
             'jam_awal'  => 'required',
             'jam_akhir' => 'required'
         ]);
@@ -79,6 +81,8 @@ class JadwalKuliahController extends Controller
             'hari'      => 'required|string',
             'tanggal'   => 'required|date',
             'ruangan'   => 'required|string',
+            'kelas'    => 'required|string',
+            'sks'      => 'required|integer',
             'jam_awal'  => 'required',
             'jam_akhir' => 'required'
         ]);
