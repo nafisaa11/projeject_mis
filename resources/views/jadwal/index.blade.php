@@ -2,13 +2,12 @@
 @extends('layout.master')
 
 @section('title')
-Jadwal Kuliah
+Daftar Jadwal Kuliah
 @endsection
 
 @section('content')
 <div class="bg-white rounded-lg shadow-md overflow-hidden">
     <div class="px-6 py-4 border-b border-gray-200 bg-gray-50 flex items-center justify-between">
-        <h2 class="text-xl font-semibold text-gray-700">Data Jadwal Kuliah</h2>
         <a href="{{ route('jadwal.create') }}" class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm px-4 py-2 rounded">
             Tambah Jadwal
         </a>
