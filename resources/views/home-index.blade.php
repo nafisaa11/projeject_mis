@@ -7,31 +7,31 @@ Dashboard
 @section('content')
 <div class="content-wrapper bg-gray-5">
   <!-- Welcome Header Section -->
-  <section class="relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+  <section class="relative overflow-hidden bg-gradient-to-r text-white">
     <div class="container mx-auto px-6 py-10">
       <div class="flex flex-col md:flex-row items-start md:items-center justify-between">
         <!-- <div class="mb-6 md:mb-0">
           <h1 class="text-3xl font-bold  ">Selamat Datang di YAN-MIS</h1>
           <p class="mt-2 text-blue-100">{{ Auth::user()->name ?? 'YAN-MIS' }} | Dashboard Administrator</p>
         </div> -->
-        <div class="flex items-center">
+        <!-- <div class="flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
-          <!-- <span>{{ date('d F Y') }}</span> -->
-        </div>
+          <span>{{ date('d F Y') }}</span>
+        </div> -->
       </div>
     </div>
     <!-- Wave Decoration -->
-    <div class="absolute bottom-0 left-0 right-0">
+    <!-- <div class="absolute bottom-0 left-0 right-0">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
         <path fill="#f9fafb" fill-opacity="1" d="M0,128L60,133.3C120,139,240,149,360,144C480,139,600,117,720,112C840,107,960,117,1080,122.7C1200,128,1320,128,1380,128L1440,128L1440,200L1380,200C1320,200,1200,200,1080,200C960,200,840,200,720,200C600,200,480,200,360,200C240,200,120,200,60,200L0,200Z"></path>
       </svg>
-    </div>
+    </div> -->
   </section>
 
   <!-- Stats Section -->
-  <section class="container mx-auto px-6 -mt-10 mb-8 relative z-10">
+  <section class="container mx-auto px-1 -mt-10 mb-8 relative z-10">
     <div class="flex flex-wrap gap-6">
       <!-- Stat Card 1 -->
       <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-blue-500 w-full md:w-1/2 lg:w-1/4">
@@ -134,7 +134,7 @@ Dashboard
 </section>
 
 <!-- Main Menu Section -->
-<section class="container mx-auto px-6 py-8">
+<section class="container mx-auto px-1 py-8">
   <h2 class="text-2xl font-bold text-gray-800 mb-6">Menu Utama</h2>
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex-wrap gap-6">
