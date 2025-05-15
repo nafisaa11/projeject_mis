@@ -51,7 +51,7 @@ Detail Mahasiswa
     </div>
 
     <div class="mt-6">
-        <a href="{{ route('mahasiswa.index') }}" class="text-indigo-600 hover:text-indigo-800 font-semibold">← Kembali ke Daftar</a>
+        <a href="{{ route('mahasiswa.index') }}" class=" hover:text-indigo-800 font-semibold text-black">← Kembali ke Daftar</a>
     </div>
 </div>
 @endsection

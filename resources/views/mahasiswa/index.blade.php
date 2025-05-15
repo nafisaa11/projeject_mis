@@ -22,7 +22,6 @@ Data Mahasiswa
                     <th class="px-4 py-3">PROGRAM STUDI</th>
                     <th class="px-4 py-3">JENIS KELAMIN</th>
                     <th class="px-4 py-3">Tindakan</th>
-                </tr>
             </thead>
             <tbody class="divide-y divide-gray-300">
                 @foreach ($mahasiswa as $mhs)

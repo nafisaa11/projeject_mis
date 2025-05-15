@@ -38,7 +38,7 @@ Dashboard
         <div class="flex justify-between items-center">
           <div>
             <p class="text-sm text-gray-500 uppercase tracking-wider">Total Mahasiswa</p>
-            <h3 class="text-2xl font-bold text-gray-800 mt-1">1,254</h3>
+            <h3 class="text-3xl font-bold text-gray-800 mt-1">{{ number_format($totalMahasiswa) }}</h3>
           </div>
           <div class="bg-blue-100 p-3 rounded-full">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -53,11 +53,11 @@ Dashboard
         <div class=" flex justify-between items-center">
         <div>
           <p class="text-sm text-gray-500 uppercase tracking-wider">Total Dosen</p>
-          <h3 class="text-2xl font-bold text-gray-800 mt-1">87</h3>
+          <h3 class="text-3xl font-bold text-gray-800 mt-1">{{ number_format($totalDosen) }}</h3>
         </div>
-        <div class="bg-green-100 p-3 rounded-full">
+        <div class="bg-green-100 p-3 rounded-full">   
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
           </svg>
         </div>
       </div>
@@ -68,7 +68,7 @@ Dashboard
         <div class=" flex justify-between items-center">
       <div>
         <p class="text-sm text-gray-500 uppercase tracking-wider">Total Mata Kuliah</p>
-        <h3 class="text-2xl font-bold text-gray-800 mt-1">156</h3>
+        <h3 class="text-3xl font-bold text-gray-800 mt-1">{{ number_format($totalMatkul) }}</h3>
       </div>
       <div class="bg-purple-100 p-3 rounded-full">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -115,15 +115,17 @@ Dashboard
       <div class="p-6">
         <div class="flex items-center mb-4">
           <div class="bg-blue-100 p-3 rounded-full mr-4">
-            <svg xmlns="http://www.w3.org/ 2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
             </svg>
           </div>
           <h3 class="text-xl font-semibold text-gray-800">Manajemen Mahasiswa</h3>
         </div>
         <p class="text-gray-600 mb-6">Kelola, update, dan perbarui data mahasiswa yang terdaftar di sistem. Termasuk informasi pribadi dan akademik.</p>
         <div class="flex justify-between items-center pt-4 border-t border-gray-100">
-          <span class="text-sm text-gray-500">Terakhir diupdate: {{ date('d M Y') }}</span>
+          <span class="text-sm text-gray-500">
+            <!-- Terakhir diupdate: {{ date('d M Y') }} -->
+          </span>
           <a href="{{ route('mahasiswa.index') }}" class="flex items-center text-blue-600 hover:text-blue-800 font-medium">
             Lihat Data
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -148,7 +150,9 @@ Dashboard
         </div>
         <p class="text-gray-600 mb-6">Kelola data dosen aktif, termasuk informasi kontak, jadwal mengajar, dan riwayat akademik lengkap.</p>
         <div class="flex justify-between items-center pt-4 border-t border-gray-100">
-          <span class="text-sm text-gray-500">Terakhir diupdate: {{ date('d M Y') }}</span>
+          <span class="text-sm text-gray-500">
+            <!-- Terakhir diupdate: {{ date('d M Y') }} -->
+          </span>
           <a href="{{ route('dosen.index') }}" class="flex items-center text-green-600 hover:text-green-800 font-medium">
             Lihat Data
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -173,7 +177,9 @@ Dashboard
         </div>
         <p class="text-gray-600 mb-6">Input, kelola, dan review data nilai mahasiswa untuk evaluasi akademik. Termasuk analisis performa semester.</p>
         <div class="flex justify-between items-center pt-4 border-t border-gray-100">
-          <span class="text-sm text-gray-500">Terakhir diupdate: {{ date('d M Y') }}</span>
+          <span class="text-sm text-gray-500">
+            <!-- Terakhir diupdate: {{ date('d M Y') }} -->
+          </span>
           <a href="{{ route('nilai.index') }}" class="flex items-center text-yellow-600 hover:text-yellow-800 font-medium">
             Lihat Data
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -198,7 +204,9 @@ Dashboard
         </div>
         <p class="text-gray-600 mb-6">Kelola daftar mata kuliah, jadwal, ruangan, dan informasi pengajar untuk semester ini.</p>
         <div class="flex justify-between items-center pt-4 border-t border-gray-100">
-          <span class="text-sm text-gray-500">Terakhir diupdate: {{ date('d M Y') }}</span>
+          <span class="text-sm text-gray-500">
+            <!-- Terakhir diupdate: {{ date('d M Y') }} -->
+          </span>
           <a href="#" class="flex items-center text-purple-600 hover:text-purple-800 font-medium">
             Lihat Data
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -223,7 +231,9 @@ Dashboard
         </div>
         <p class="text-gray-600 mb-6">Atur dan kelola jadwal kuliah, termasuk pengaturan ruangan, waktu dan manajemen konflik jadwal.</p>
         <div class="flex justify-between items-center pt-4 border-t border-gray-100">
-          <span class="text-sm text-gray-500">Terakhir diupdate: {{ date('d M Y') }}</span>
+          <span class="text-sm text-gray-500">
+            <!-- Terakhir diupdate: {{ date('d M Y') }} -->
+          </span>
           <a href="#" class="flex items-center text-red-600 hover:text-red-800 font-medium">
             Lihat Data
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -246,9 +256,11 @@ Dashboard
           </div>
           <h3 class="text-xl font-semibold text-gray-800">FRS </h3>
         </div>
-        <p class="text-gray-600 mb-6">Kelola data FRS MBKM ,Formulir Rencana Studi (FRS) Online Per Semester </p>
+        <p class="text-gray-600 mb-6">Kelola data FRS MBKM ,Formulir Rencana Studi (FRS) Online Per Semester. </p>
         <div class="flex justify-between items-center pt-4 border-t border-gray-100">
-          <span class="text-sm text-gray-500">Terakhir diupdate: {{ date('d M Y') }}</span>
+          <span class="text-sm text-gray-500">
+            <!-- Terakhir diupdate: {{ date('d M Y') }} -->
+          </span>
           <a href="#" class="flex items-center text-red-600 hover:text-red-800 font-medium">
             Lihat Data
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
