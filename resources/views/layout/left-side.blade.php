@@ -1,7 +1,7 @@
 <aside class="w-64 bg-[#0A1931] text-white flex-shrink-0 fixed top-0 left-0 h-full">
   <!-- Logo -->
   <div class="flex flex-row items-center px-6 py-5 border-b border-gray-700">
-    <img src="/build/assets/logo.svg" alt="Logo" style="width: 40px; height: auto; object-fit: contain;">
+    <img src="/build/assets/logo.png" alt="Logo" style="width: 40px; height: auto; object-fit: contain;">
     <h1 class="text-3xl font-bold ml-2">
       <span class="text-white">SIM</span><span style="color: #FCC823">AK</span>
     </h1>
