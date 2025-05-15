@@ -28,6 +28,7 @@
         </a>
       </li>
 
+
       <li>
         <a href="{{ route('mahasiswa.index') }}"
           class="flex items-center gap-3 px-3 py-2 rounded transition duration-200
@@ -86,8 +87,6 @@
           </button>
         </form>
       </li>
-
-
       {{-- <li>
         <a href="{{ route('nilai.index') }}"
       class="flex items-center gap-3 px-3 py-2 rounded transition duration-200
