@@ -72,17 +72,21 @@
       FRS
       </a>
       </li>
-      
+
       <li>
-        <a href="{{ route('frs.index') }}"
-      class="flex items-center gap-3 px-3 py-2 rounded transition duration-200
-      {{ Request::is('frs*') ? 'bg-white text-gray-900 font-semibold' : 'hover:bg-gray-800' }}">
-      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M19 3H5c-1.1 0-2 .9-2 2v16l4-4h12c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 10H9v-2h6v2zm2-4H7V7h10v2z" />
-      </svg>
-      FRS
-      </a>
+        <form method="POST" action="{{ route('logout') }}">
+          @csrf
+          <button type="submit"
+            class="flex items-center gap-3 px-3 py-2 rounded transition duration-200
+            hover:bg-gray-800 text-white w-full text-left">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v16l4-4h12c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-4 10H9v-2h6v2zm2-4H7V7h10v2z" />
+            </svg>
+            Logout
+          </button>
+        </form>
       </li>
+
 
       {{-- <li>
         <a href="{{ route('nilai.index') }}"

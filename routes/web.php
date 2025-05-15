@@ -17,7 +17,7 @@ Route::middleware(['guest'])->group(function () {
 });
 
 // Logout
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+Route::post('/logout', [AuthController::class, 'destroy'])->name('logout');
 
 // Protected routes (after login)
 Route::middleware(['auth'])->group(function () {
