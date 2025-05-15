@@ -1,14 +1,20 @@
-<div class="flex flex-col flex-1 ml-64">
-    
-    <!-- Navbar -->
-    <header class="flex items-center justify-between bg-white px-6 py-4 shadow fixed w-[calc(100%-16rem)] left-64 top-0 z-10">
-      <div class="flex items-center space-x-3">
-        <!-- Icon menu -->
-        <button id="toggleSidebar" class="text-gray-500 hover:text-gray-700 focus:outline-none">
-          ☰
-        </button>
-        <!-- Search box -->
-        <input type="text" placeholder="Search"
-          class="border border-gray-300 rounded px-3 py-1 focus:outline-none focus:ring focus:border-blue-400" />
+<div class="flex flex-col flex-1 ml-64 p-6">
+  <!-- Header -->
+  <header class="bg-[#003580] text-white p-4 rounded-lg flex items-center justify-between mb-6 sticky top-6 z-20">
+    <!-- Title -->
+    <h1 class="text-xl font-semibold">Data Mahasiswa</h1>
+
+    <!-- Search box -->
+    <div class="relative">
+      <input
+        type="text"
+        placeholder="Search"
+        class="pl-4 pr-10 py-2 rounded-lg border border-gray-300 focus:outline-none text-white bg-white placeholder-gray-400 focus:ring-2 focus:ring-[#FCC823] focus:border-transparent" />
+      <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="32" fill="#000000" viewBox="0 0 256 256">
+          <path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"></path>
+        </svg>
       </div>
-    </header>
+    </div>
+  </header>
+  

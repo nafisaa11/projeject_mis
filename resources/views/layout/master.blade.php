@@ -2,7 +2,8 @@
 <html lang="id">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />\
+    <script src="https://unpkg.com/phosphor-icons"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>@yield('title', 'Aplikasi')</title>
 </head>
@@ -10,10 +11,10 @@
 
     @include('layout.header')
 
-    <div class="flex flex-1 pt-16">
+    <div class="flex flex-1">
         @include('layout.left-side')
 
-        <main class="flex-1 p-6">
+        <main class="flex-1 ">
             @yield('content')
         </main>
     </div>
