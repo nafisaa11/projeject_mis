@@ -32,10 +32,11 @@ class AuthController extends Controller
             $role = Auth::user()->role;
             return match ($role) {
                 'admin' => redirect()->route('home.index'),
-                // 'mahasiswa' => redirect()->route('mahasiswa.dashboard'),
+                'mahasiswa' => redirect()->route('home.index'),
                 // 'dosen' => redirect()->route('dosen.dashboard'),
             };
         }
+        
     }
 
     /**

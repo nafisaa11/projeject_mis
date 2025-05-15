@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('hari');
             $table->date('tanggal');
             $table->string('ruangan');
+            $table->string('kelas');
+            $table->integer('sks');
             $table->time('jam_awal');
             $table->time('jam_akhir');
             $table->timestamps();

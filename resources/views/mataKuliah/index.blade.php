@@ -1,13 +1,12 @@
 @extends('layout.master')
 
 @section('title')
-Mata Kuliah
+Data Mata Kuliah
 @endsection
 
 @section('content')
 <div class="bg-white rounded-lg shadow-md overflow-hidden">
     <div class="flex justify-between items-center px-6 py-4 border-b border-gray-200 bg-gray-50">
-        <h2 class="text-xl font-semibold text-gray-700">Daftar Mata Kuliah</h2>
         <a href="{{ route('mataKuliah.create') }}" class="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold py-2 px-4 rounded">
             Tambah Mata Kuliah
         </a>

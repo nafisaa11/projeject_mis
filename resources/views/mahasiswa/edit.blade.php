@@ -22,6 +22,10 @@ Edit Mahasiswa
             <input type="text" name="prodi" id="prodi" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="{{ old('prodi', $mahasiswa->prodi) }}" required>
         </div>
         <div>
+            <label for="kelas" class="block text-gray-700 text-sm font-bold mb-2">Kelas</label>
+            <input type="text" name="kelas" id="kelas" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" value="{{ old('kelas', $mahasiswa->kelas) }}" required>
+        </div>
+        <div>
             <label for="jenis_kelamin" class="block text-gray-700 text-sm font-bold mb-2">Jenis Kelamin</label>
             <select name="jenis_kelamin" id="jenis_kelamin" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
                 <option value="">Pilih</option>
