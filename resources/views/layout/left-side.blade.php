@@ -18,9 +18,10 @@
       <li><a href="{{ route('mahasiswa.index') }}" class="flex items-center px-3 py-2 rounded hover:bg-gray-800 {{ Request::is('mahasiswa*') ? 'bg-gray-800' : '' }}">Mahasiswa</a></li>
       <li><a href="{{ route('dosen.index') }}" class="flex items-center px-3 py-2 rounded hover:bg-gray-800 {{ Request::is('dosen*') ? 'bg-gray-800' : '' }}">Dosen</a></li>
       <li><a href="{{ route('mataKuliah.index') }}" class="flex items-center px-3 py-2 rounded hover:bg-gray-800 {{ Request::is('mataKuliah*') ? 'bg-gray-800' : '' }}">Mata Kuliah</a></li>
-      {{-- <li><a href="{{ route('frs.index') }}" class="flex items-center px-3 py-2 rounded hover:bg-gray-800 {{ Request::is('frs*') ? 'bg-gray-800' : '' }}">FRS</a></li> --}}
-      {{-- <li><a href="{{ route('nilai.index') }}" class="flex items-center px-3 py-2 rounded hover:bg-gray-800 {{ Request::is('nilai*') ? 'bg-gray-800' : '' }}">Nilai</a></li> --}}
-      {{-- <li><a href="{{ route('jadwal.index') }}" class="flex items-center px-3 py-2 rounded hover:bg-gray-800 {{ Request::is('jadwal*') ? 'bg-gray-800' : '' }}">Jadwal</a></li> --}}
+      <li><a href="#" class="flex items-center px-3 py-2 rounded hover:bg-gray-800 {{ Request::is('frs*') ? 'bg-gray-800' : '' }}">FRS</a></li>
+      <li><a href="#" class="flex items-center px-3 py-2 rounded hover:bg-gray-800 {{ Request::is('nilai*') ? 'bg-gray-800' : '' }}">Nilai</a></li>
+      <li><a href="#" class="flex items-center px-3 py-2 rounded hover:bg-gray-800 {{ Request::is('jadwal*') ? 'bg-gray-800' : '' }}">Jadwal</a></li>
+      <li><a href="{{route('logout')}}" class="flex items-center px-3 py-2 rounded hover:bg-gray-800 ">Logout</a></li>
     </ul>
   </nav>
 </aside>

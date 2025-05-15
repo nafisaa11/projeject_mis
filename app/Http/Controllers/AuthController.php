@@ -81,7 +81,7 @@ class AuthController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function logout()
     {
         Auth::logout();
         return redirect('/login');
